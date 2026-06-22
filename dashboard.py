@@ -38,8 +38,8 @@ if submitted:
     filtered = filtered[
     filtered["Order Date"].dt.date.between(start, end)
 ]
- 
- csv_bytes= df.to_csv(index=False)
+st.sidebar.divider()
+csv_bytes= df.to_csv(index=False).encode("utf-8")
 st.sidebar.download_button("Dowload filtered data",data=csv_bytes,file_name="superstore_filtered.csv",mime="text/csv")
 
 disc_arr = filtered["Discount"].values

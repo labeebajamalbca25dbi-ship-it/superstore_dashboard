@@ -9,7 +9,7 @@ st.set_page_config(page_title="Superstore Dashboard",page_icon="📊",layout="wi
 
 @st.cache_data
 def load_data():
-    df=pd.read_csv(r"C:\Users\labee\OneDrive\Documents\Desktop\super store\output\superstore_clean.csv",parse_dates=["Order Date","Ship Date"])
+    df=pd.read_csv("data\superstore_clean.csv",parse_dates=["Order Date","Ship Date"])
     return df
 
 
